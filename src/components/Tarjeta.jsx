@@ -3,9 +3,12 @@ import { useContext } from 'react'
 import { DataContext } from '../context/DataContext';
 import Card from 'react-bootstrap/esm/Card';
 import Button from 'react-bootstrap/esm/Button';
+import { useNavigate } from "react-router-dom";
 
 
 const Tarjeta = () => {
+
+    const navigate = useNavigate();
 
     const { data } = useContext(DataContext);
 
@@ -19,7 +22,7 @@ const Tarjeta = () => {
             <div className="row row-cols-md-auto justify-content-center">
                 {data.map(d =>
                     <Card className='m-2' style={{ width: '18rem' }}>
-                        <Card.Title>{d.nombre}</Card.Title>
+                        <Card.Title className="text-muted">{d.nombre}</Card.Title>
                         <Card.Img variant="top" src={d.img} />
                         <Card.Body>
 
@@ -31,6 +34,7 @@ const Tarjeta = () => {
                                 >${d.precio}</span>
 
                                 <Button style={{ backgroundColor: 'rgb(192, 214, 223)', color: 'rgb(79, 109, 122)' }} size="sm">Más info</Button>
+      
                             </div>
                         </Card.Body>
                     </Card>

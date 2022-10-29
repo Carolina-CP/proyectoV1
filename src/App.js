@@ -12,6 +12,7 @@ import Tienda from './views/Tienda';
 import Proyecto from './views/Proyecto';
 import Contacto from './views/Contacto';
 import MiPerfil from './views/MiPerfil';
+import Detalles from './views/Detalles';
 
 
 
@@ -28,6 +29,7 @@ function App() {
             <Route path='/registrarse' element={<Registrarse />} />
             <Route path='/novedades' element={<Novedades />} />
             <Route path='/tienda' element={<Tienda />} />
+            <Route path="/tienda/:id" element={<Detalles />} />
             <Route path='/proyecto' element={<Proyecto />} />
             <Route path='/contacto' element={<Contacto />} />
             <Route path='/nombre' element={<MiPerfil />} />

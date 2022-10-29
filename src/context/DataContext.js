@@ -13,15 +13,7 @@ const dataFixed = [{
     descripcion: 'Este curso bla bla bla, y mucho mas bla bla bla',
     favorito: false
 },
-{
-    categoria: "Ñaña",
-    id: 1,
-    nombre: "Otra cosa",
-    proveedor: "Anita",
-    img: "https://img.remediosdigitales.com/b929f4/duncan_chapple_horizontal/450_1000.jpg", ingredients: ["mozzarella", "pimientos", "pollo grillé", "orégano"],
-    descripcion: 'Este curso bla bla bla, y mucho mas bla bla bla',
-    favorito: false
-}]
+
 
 */
 

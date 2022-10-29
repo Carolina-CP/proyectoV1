@@ -5,6 +5,8 @@ import { DataContext } from '../context/DataContext';
 
 import Tarjeta from '../components/Tarjeta';
 
+import FormularioCategorias from '../components/FormularioCategorias';
+
 
 
 const Tienda = () => {
@@ -20,7 +22,10 @@ const Tienda = () => {
       <NavegadorInterno />
 
       <div className="container my-4 justify-content-center">
-       <h2>Tienda</h2>
+        <div> 
+          <FormularioCategorias />
+       
+        </div>
           <Tarjeta />
     
       </div>
