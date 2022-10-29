@@ -1,7 +1,7 @@
 
 //import './App.css';
-
 import { DataProvider } from './context/DataContext';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavegadorPublico from './components/NavegadorPublico';
 import Home from './views/Home';
@@ -15,10 +15,11 @@ import MiPerfil from './views/MiPerfil';
 
 
 
+
 function App() {
   return (
     <BrowserRouter>
-      <DataProvider>
+      <DataProvider> 
   
           <NavegadorPublico />
           <Routes>
@@ -32,7 +33,7 @@ function App() {
             <Route path='/nombre' element={<MiPerfil />} />
           </Routes>
 
-      </DataProvider>
+   </DataProvider>
     </BrowserRouter>
   );
 }

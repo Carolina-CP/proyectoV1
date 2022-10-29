@@ -1,25 +1,11 @@
-import React, { useContext } from 'react';
-import { DataContext } from '../context/DataContext';
+
+
 import Button from 'react-bootstrap/esm/Button';
 import { Link } from 'react-router-dom';
 
 const Ingresar = () => {
 
-  const { datosUsuario, setDatosUsuario } = useContext(DataContext);
-
-  const validarInput = (e) =>{
-    e.preventDefault()
-
- if (datosUsuario === nutri) {
-  alert ('linda')
- } else {
-  alert('cuecs')
- }
-
-
-  }
-  console.log(datosUsuario)
-
+  
   return (
     <div className='container text-center ml-5 mt-5 w-25'>
       <form className="form-group">
@@ -29,7 +15,7 @@ const Ingresar = () => {
             <input type="mail"
               className="form-control"
               placeholder='name@example.com'
-              onChange={(e) => setDatosUsuario(e.target.value)}
+            
             />
 
           </div>
@@ -38,7 +24,7 @@ const Ingresar = () => {
             <label className=" mb-2">Contraseña</label>
             <input type="pasword"
               className="form-control"
-              onChange={(e) => console.log(e.target.value)}
+             
             />
           </div>
         </div>

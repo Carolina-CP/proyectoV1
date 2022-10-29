@@ -1,28 +1,31 @@
-import React, { useContext } from 'react';
-import { DataContext} from '../context/DataContext';
+
+import { useContext } from 'react'
 import NavegadorInterno from '../components/NavegadorInterno'
+import { DataContext } from '../context/DataContext';
+
+import Tarjeta from '../components/Tarjeta';
 
 
 
 const Novedades = () => {
 
-  const {datos} = useContext(DataContext);
+  const { data } = useContext(DataContext);
 
   console.log('este es novedades')
-  console.log(datos)
+  console.log({ data })
+
 
   return (
     <div>
       <NavegadorInterno />
 
-      <div>
-         {datos.map((dato) => (
-          <p>{dato.nombre}</p>
-          
-         ))}
-         
+      <div className="container my-4 justify-content-center">
+      <h2>Novedades</h2>
+          <Tarjeta />
+    
       </div>
-     
+
+
     </div>
   )
 }
