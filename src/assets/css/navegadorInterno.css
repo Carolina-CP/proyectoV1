@@ -1,0 +1,19 @@
+.navegadorInterno{
+    background-color: rgb(192, 214, 223);
+    
+}
+
+
+.link{
+    text-decoration: none;
+    color: grey;
+}
+
+.link:hover{
+    text-decoration: none;
+    color: rgb(221, 110, 66);
+}
+
+.desplegable{
+    color: grey;
+}

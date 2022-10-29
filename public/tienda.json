@@ -1,0 +1,20 @@
+[
+    {
+        "categoria": "graficas",
+        "nombre": "Diseño de Currículo",
+        "proveedor": "Juan Perez",
+        "favorito":false
+    },
+    {
+        "categoria": "psicologia",
+        "nombre": "Preparación Entrevista Online",
+        "proveedor": "Anita González",
+        "favorito":false
+    },
+    {
+        "categoria": "psicologia",
+        "nombre": "¿Cómo lidiar con la Frustración? ",
+        "proveedor": "María José Cárdenas",
+        "favorito":false
+    }
+]
