@@ -1,86 +1,71 @@
 import React from 'react';
 import NavegadorInterno from '../components/NavegadorInterno';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { DataContext } from '../context/DataContext';
+import Card from 'react-bootstrap/Card';
+
+import Tarjeta from '../components/Tarjeta';
 
 const MiPerfil = () => {
-  return (
 
+  const navigate = useNavigate();
+
+  const { data } = useContext(DataContext);
+  console.log('bandera perfil')
+  console.log(data[0].proveedor)
+
+  return (
     <div>
       <NavegadorInterno />
-      <div className="container mb-4 justify-content-center">
+      <div className="container my-4 justify-content-center">
 
+        <div className="container justify-content-center">
 
-        <div className="container my-4 justify-content-center mt-4">
-          <div className="row">
-            <div className="col-sm-5 col-md-6">
-              <Form>
-                <Row className="mb-3">
-                  <Form.Group as={Col} controlId="formGridEmail">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
-                  </Form.Group>
+          <div className="row mx-2">
 
-                  <Form.Group as={Col} controlId="formGridPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
-                  </Form.Group>
-                </Row>
+            <div className="col-sm-5 col-md-6"
+              style={{
+                backgroundColor: 'rgb(234, 234, 234)',
+                color: 'rgb(79, 109, 122)'
+              }}>
+              <div >
 
-                <Form.Group className="mb-3" controlId="formGridAddress1">
-                  <Form.Label>Address</Form.Label>
-                  <Form.Control placeholder="1234 Main St" />
-                </Form.Group>
+                <Card className='border-0 bg-transparent ' style={{ width: '18rem' }}>
+                  <Card.Body
+                    className='border-none '>
+                    <Card.Title>{data[0].proveedor}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">{data[0].profesion}</Card.Subtitle>
+                    <Card.Text>
+                      Some quick example text to build on the card title and make up the
+                      bulk of the card's content.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
 
-                <Form.Group className="mb-3" controlId="formGridAddress2">
-                  <Form.Label>Address 2</Form.Label>
-                  <Form.Control placeholder="Apartment, studio, or floor" />
-                </Form.Group>
-
-                <Row className="mb-3">
-                  <Form.Group as={Col} controlId="formGridCity">
-                    <Form.Label>City</Form.Label>
-                    <Form.Control />
-                  </Form.Group>
-
-                  <Form.Group as={Col} controlId="formGridState">
-                    <Form.Label>State</Form.Label>
-                    <Form.Select defaultValue="Choose...">
-                      <option>Choose...</option>
-                      <option>...</option>
-                    </Form.Select>
-                  </Form.Group>
-
-                  <Form.Group as={Col} controlId="formGridZip">
-                    <Form.Label>Zip</Form.Label>
-                    <Form.Control />
-                  </Form.Group>
-                </Row>
-
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-
-                <Button variant="primary" type="submit">
-                  Submit
-                </Button>
-              </Form>
-
+              </div>
             </div>
 
-            <div className="col-sm-5 col-md-6">
-              aquí se verá la publicación
+            <div className="col-sm-5 col-md-6 d-flex align-items-center justify-content-center">
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary"
+                  type="button"
+                  style={{ backgroundColor: 'rgb(221, 110, 66)', color: 'white', border: 'none' }}
+                  onClick={() => navigate(`/perfil/nueva_publicacion`)}>
+                  Nueva Publicación</button>
+              </div>
             </div>
 
           </div>
         </div>
 
+        <div className="container justify-content-center">
+          <Tarjeta />
+        </div>
+
 
       </div>
-
-    </div>
+    </div >
   )
 }
 

@@ -11,6 +11,7 @@ import Novedades from './views/Novedades';
 import Tienda from './views/Tienda';
 import Nosotros from './views/Nosotros';
 import MiPerfil from './views/MiPerfil';
+import NuevaPublicacion from './views/NuevaPublicacion';
 import Detalles from './views/Detalles';
 import NotFound from './views/Notfound';
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/tienda/:id" element={<Detalles />} />
             <Route path='/nosotros' element={<Nosotros />} />
             <Route path='/nombre' element={<MiPerfil />} />
+            <Route path='/miPerfil/publicacion' element={<NuevaPublicacion />} />
            < Route path='/*' element={<NotFound />} />
           </Routes>
 

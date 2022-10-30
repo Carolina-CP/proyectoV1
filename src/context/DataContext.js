@@ -3,19 +3,6 @@ import React, { createContext, useState, useEffect } from "react";
 
 
 export const DataContext = createContext();
-/*
-const dataFixed = [{
-    categoria: "graficas",
-    id: 1,
-    nombre: "Diseño de Currículo",
-    proveedor: "Juan López",
-    img: "https://img.remediosdigitales.com/b929f4/duncan_chapple_horizontal/450_1000.jpg", ingredients: ["mozzarella", "pimientos", "pollo grillé", "orégano"],
-    descripcion: 'Este curso bla bla bla, y mucho mas bla bla bla',
-    favorito: false
-},
-
-
-*/
 
 export const DataProvider = ({ children }) => {
 

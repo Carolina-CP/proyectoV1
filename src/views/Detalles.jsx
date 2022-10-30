@@ -13,7 +13,7 @@ const Detalles = () => {
 
 
     const { data } = useContext(DataContext);
-    console.log('bandera 1')
+    console.log('bandera detalles')
     console.log(data[0].nombre)
 
     return (

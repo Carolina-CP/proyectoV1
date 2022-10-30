@@ -1,19 +1,28 @@
-.navegadorInterno{
+.navegadorInterno {
     background-color: rgb(192, 214, 223);
+    color:blueviolet;
     
 }
 
 
-.link{
+.inactive{
     text-decoration: none;
     color: grey;
 }
 
-.link:hover{
+.inactive:hover {
     text-decoration: none;
     color: rgb(221, 110, 66);
 }
 
-.desplegable{
-    color: grey;
+
+.active {
+    color:  rgb(221, 110, 66);
+    border-bottom: 2px solid rgb(221, 110, 66);
+    text-decoration: none;
+}
+
+.active:hover {
+    text-decoration: none;
+    color: rgb(221, 110, 66);
 }
