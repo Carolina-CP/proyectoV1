@@ -9,8 +9,7 @@ import Ingresar from './views/Ingresar';
 import Registrarse from './views/Registrase';
 import Novedades from './views/Novedades';
 import Tienda from './views/Tienda';
-import Proyecto from './views/Proyecto';
-import Contacto from './views/Contacto';
+import Nosotros from './views/Nosotros';
 import MiPerfil from './views/MiPerfil';
 import Detalles from './views/Detalles';
 import NotFound from './views/Notfound';
@@ -31,8 +30,7 @@ function App() {
             <Route path='/novedades' element={<Novedades />} />
             <Route path='/tienda' element={<Tienda />} />
             <Route path="/tienda/:id" element={<Detalles />} />
-            <Route path='/proyecto' element={<Proyecto />} />
-            <Route path='/contacto' element={<Contacto />} />
+            <Route path='/nosotros' element={<Nosotros />} />
             <Route path='/nombre' element={<MiPerfil />} />
            < Route path='/*' element={<NotFound />} />
           </Routes>

@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { useParams } from 'react-router-dom';
 import NavegadorInterno from '../components/NavegadorInterno';
 import { DataContext } from '../context/DataContext';
+import FormularioCategorias from '../components/FormularioCategorias';
 
 const Detalles = () => {
 
@@ -16,12 +17,15 @@ const Detalles = () => {
     console.log(data[0].nombre)
 
     return (
+        
+<div> 
+ <NavegadorInterno />
+        <div className="container mb-4 justify-content-center">
+           
+            <FormularioCategorias />
+  
 
-        <div>
-            <NavegadorInterno />
-
-
-            <div className="container card-body mt-4">
+            <div className="container my-4 justify-content-center mt-4">
                 <div className="row">
                     <div className="col-sm-5 col-md-6">
                         <Card.Header className=" border-bottom mb-2" >{data[0].categoria}</Card.Header>
@@ -32,10 +36,10 @@ const Detalles = () => {
                             <Card.Subtitle className="mb-2 text-muted">{data[0].profesion}</Card.Subtitle>
                             <Card.Text className="card-text mt-4">{data[0].descripcion}</Card.Text>
                         </Card.Body>
-                        <Card.Body className='mt-4 text-center'>
+                        <Card.Body className='mt-3 text-center'>
                             <span
                                 style={{ color: 'rgb(221, 110, 66)' }}
-                                className='fs-3 mt-4'
+                                className='fs-3 '
                             > ${data[0].precio}</span>
                         </Card.Body>
                         <Card.Body className="d-grid gap-2 mt-4">
@@ -53,6 +57,7 @@ const Detalles = () => {
 
             </div>
 
+        </div>
         </div>
     )
 }
