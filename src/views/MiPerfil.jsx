@@ -51,7 +51,7 @@ const MiPerfil = () => {
                 <button class="btn btn-primary"
                   type="button"
                   style={{ backgroundColor: 'rgb(221, 110, 66)', color: 'white', border: 'none' }}
-                  onClick={() => navigate(`/perfil/nueva_publicacion`)}>
+                  onClick={() => navigate(`/nombre/nueva_publicacion`)}>
                   Nueva Publicación</button>
               </div>
             </div>

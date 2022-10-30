@@ -30,7 +30,7 @@ const NavegadorInterno = () => {
         </Nav.Item>
 
         <Nav.Item className=" m-2 p-2" to='/novedades'>
-          <NavLink className={setActiveClass} to="/mi_perfil">
+          <NavLink className={setActiveClass} to="/nombre">
             Mi Perfil </NavLink>
         </Nav.Item>
 

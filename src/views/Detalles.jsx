@@ -9,7 +9,7 @@ import FormularioCategorias from '../components/FormularioCategorias';
 
 const Detalles = () => {
 
-    const { nombre } = useParams();
+    const { id } = useParams();
 
 
     const { data } = useContext(DataContext);
