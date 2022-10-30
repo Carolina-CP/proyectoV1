@@ -13,6 +13,7 @@ import Proyecto from './views/Proyecto';
 import Contacto from './views/Contacto';
 import MiPerfil from './views/MiPerfil';
 import Detalles from './views/Detalles';
+import NotFound from './views/Notfound';
 
 
 
@@ -33,6 +34,7 @@ function App() {
             <Route path='/proyecto' element={<Proyecto />} />
             <Route path='/contacto' element={<Contacto />} />
             <Route path='/nombre' element={<MiPerfil />} />
+           < Route path='/*' element={<NotFound />} />
           </Routes>
 
    </DataProvider>

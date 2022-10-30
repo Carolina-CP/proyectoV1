@@ -1,48 +1,60 @@
 import React from 'react'
 import { useContext } from "react";
+import { Button } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
 import { useParams } from 'react-router-dom';
+import NavegadorInterno from '../components/NavegadorInterno';
 import { DataContext } from '../context/DataContext';
 
 const Detalles = () => {
 
-  const { id } = useParams();
+    const { nombre } = useParams();
 
 
-  const { data } = useContext(DataContext);
+    const { data } = useContext(DataContext);
+    console.log('bandera 1')
+    console.log(data[0].nombre)
 
-  const elemento = data.filter((e) => e.id === id)
-  console.log(elemento)
+    return (
+
+        <div>
+            <NavegadorInterno />
 
 
-  return (
+            <div className="container card-body mt-4">
+                <div className="row">
+                    <div className="col-sm-5 col-md-6">
+                        <Card.Header className=" border-bottom mb-2" >{data[0].categoria}</Card.Header>
+                        <Card.Body className="card-block ">
 
-    <div className="container m-4 mx-auto">
-      <div class="card flex-row row-cols-md-auto">
+                            <Card.Title style={{ color: 'rgb(79, 109, 122)' }} className=" mt-4 fs-3">{data[0].nombre}</Card.Title>
+                            <Card.Title className="mb-2 text-muted">{data[0].proveedor}</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">{data[0].profesion}</Card.Subtitle>
+                            <Card.Text className="card-text mt-4">{data[0].descripcion}</Card.Text>
+                        </Card.Body>
+                        <Card.Body className='mt-4 text-center'>
+                            <span
+                                style={{ color: 'rgb(221, 110, 66)' }}
+                                className='fs-3 mt-4'
+                            > ${data[0].precio}</span>
+                        </Card.Body>
+                        <Card.Body className="d-grid gap-2 mt-4">
+                            <Button variant="secondary" size="lg">Comprar</Button>
+                        </Card.Body>
+                    </div>
 
-        <img class="card-img-left example-card-img-responsive" alt={elemento[0].nombre}
-          src={elemento[0].img} /> 
 
-        <div class="card-body">
-          <div class="card-title h5 h4-sm text-start text-capitalize"><h2>{elemento[0].nombre}</h2></div>
-          <p class="card-text text-start">{elemento[0].descripcion}</p>
+                    <div className="col-sm-5 col-md-6 mt-4">
+                        <img className="card-img" src={data[0].img} alt={data[0].nombre} />
+                        <div className="card-img-overlay">
+                        </div>
+                    </div>
+                </div>
 
-          <ul className="text-start border-top ">
-            <h4 className="text-secondary text-start m-4">Ingredientes:</h4>
-            {elemento[0].ingredients.map((i) => (
-              <li className="list-group-item">🍕  {i}</li>
-            ))}
-          </ul>
+            </div>
 
-          <div className="row">
-            <h4 className="text-danger"> ${elemento[0].precio}</h4>
-            <button className="btn btn-danger m-2" onClick={() => console.log(elemento[0].id)}>Añadir 🛒</button>
-          </div>
         </div>
-      </div>
-
-    </div>
-
-  )
+    )
 }
 
 export default Detalles

@@ -33,8 +33,10 @@ const Tarjeta = () => {
                                     className='fs-4'
                                 >${d.precio}</span>
 
-                                <Button style={{ backgroundColor: 'rgb(192, 214, 223)', color: 'rgb(79, 109, 122)' }} size="sm">Más info</Button>
-      
+                                <Button style={{ backgroundColor: 'rgb(192, 214, 223)', color: 'rgb(79, 109, 122)' }} 
+                                size="sm"
+                                onClick={() => navigate(`/tienda/detalles`)}>
+                                    Más info</Button>
                             </div>
                         </Card.Body>
                     </Card>
