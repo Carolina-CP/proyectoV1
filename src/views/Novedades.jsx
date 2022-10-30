@@ -20,7 +20,6 @@ const Novedades = () => {
       <NavegadorInterno />
 
       <div className="container my-4 justify-content-center">
-      <h2>Novedades</h2>
           <Tarjeta />
     
       </div>

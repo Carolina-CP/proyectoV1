@@ -21,7 +21,7 @@ const Tarjeta = () => {
         <div >
             <div className="row row-cols-md-auto justify-content-center">
                 {data.map(d =>
-                    <Card className='m-2' style={{ width: '18rem' }}>
+                    <Card className='m-3' style={{ width: '21rem' }}>
                         <Card.Title className="text-muted">{d.nombre}</Card.Title>
                         <Card.Img variant="top" src={d.img} />
                         <Card.Body>
