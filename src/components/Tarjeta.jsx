@@ -37,7 +37,7 @@ const Tarjeta = () => {
                                 color: 'rgb(79, 109, 122)', 
                                 borderColor: 'rgb(79, 109, 122)'}} 
                                 size="sm"
-                                onClick={() => navigate(`/tienda/id`)}>
+                                onClick={() => navigate(`/tienda/nombre_curso`)}>
                                     Más información</Button>
                             </div>
                         </Card.Body>

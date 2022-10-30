@@ -1,10 +1,10 @@
 
 import { useContext } from 'react'
-import NavegadorInterno from '../components/NavegadorInterno'
+
 import { DataContext } from '../context/DataContext';
 
+import NavegadorInterno from '../components/NavegadorInterno';
 import Tarjeta from '../components/Tarjeta';
-
 import FormularioCategorias from '../components/FormularioCategorias';
 
 
@@ -22,12 +22,12 @@ const Tienda = () => {
       <NavegadorInterno />
 
       <div className="container my-4 justify-content-center">
-        <div> 
+        <div>
           <FormularioCategorias />
-       
+
         </div>
-          <Tarjeta />
-    
+        <Tarjeta />
+
       </div>
 
 

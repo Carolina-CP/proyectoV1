@@ -1,6 +1,5 @@
 import React from 'react';
 import NavegadorInterno from '../components/NavegadorInterno'
-import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 import Form from 'react-bootstrap/Form';
@@ -109,13 +108,20 @@ const Nosotros = () => {
                         <Form.Label>Mensaje</Form.Label>
                         <Form.Control as="textarea" rows={3} />
                       </Form.Group>
-                    
+
                     </>
                   </Accordion.Body>
                   <Accordion.Body className='text-center'>
-                    <Button variant="light" size="lg"
-                      style={{ backgroundColor: 'rgb(79, 109, 122)' }}
-                    >Enviar</Button>
+
+
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                      <button class="btn"
+                        type="button"
+                        style={{ backgroundColor: 'white', color: 'rgb(79, 109, 122)'}}>
+                        Enviar</button>
+                    </div>
+
+
                   </Accordion.Body>
 
                 </Accordion.Item>

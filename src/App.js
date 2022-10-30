@@ -30,7 +30,7 @@ function App() {
             <Route path='/registrarse' element={<Registrarse />} />
             <Route path='/novedades' element={<Novedades />} />
             <Route path='/tienda' element={<Tienda />} />
-            <Route path="/tienda/:id" element={<Detalles />} />
+            <Route path="/tienda/nombre_curso" element={<Detalles />} />
             <Route path='/nosotros' element={<Nosotros />} />
             <Route path='/nombre' element={<MiPerfil />} />
             <Route path='/nombre/nueva_publicacion' element={<NuevaPublicacion />} />

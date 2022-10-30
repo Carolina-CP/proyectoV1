@@ -1,9 +1,15 @@
 import React from 'react';
 import Button from 'react-bootstrap/esm/Button';
+import { useNavigate } from "react-router-dom";
 
 const Registrase = () => {
+
+  const navigate = useNavigate();
+
   return (
+    
     <div className='container text-center ml-5 mt-5 w-25'>
+      <h5>Crea una cuenta y mejora tus opciones laborales</h5>
       <form className="form-group">
 <div className='text-start'> 
         <div className=" mt-4">
@@ -31,7 +37,9 @@ const Registrase = () => {
             className="form-control"/>
         </div>
 </div>
-        <Button type="submit" className='m-4'>Crear Cuenta</Button>
+        <Button type="submit" className='m-4'
+        onClick={() => navigate(`/ingresar`)}
+        >Crear Cuenta</Button>
       </form>
     </div>
   )
