@@ -1,7 +1,6 @@
 
-
-import Button from 'react-bootstrap/esm/Button';
-import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import { useNavigate } from "react-router-dom";
 
 const Ingresar = () => {
@@ -9,39 +8,30 @@ const Ingresar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='container text-center ml-5 mt-5 w-25'>
-      <form className="form-group">
-        <div className="form-group text-start">
-          <div className=" mt-4">
-            <label className=" mb-2">Correo Electrónico</label>
-            <input type="mail"
-              className="form-control"
-              placeholder='name@example.com'
+    <div className='container text-center ml-5 mt-5 col-10 col-md-4'>
+      <Form>
+        <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
+          <Form.Label>Coreo Electrónico</Form.Label>
+          <Form.Control type="email" />
+        </Form.Group>
 
-            />
+        <Form.Group className="mb-3 text-start" controlId="formBasicPassword">
+          <Form.Label>Contraseña</Form.Label>
+          <Form.Control type="password" />
+        </Form.Group>
 
-          </div>
 
-          <div className=" mt-4">
-            <label className=" mb-2">Contraseña</label>
-            <input type="pasword"
-              className="form-control"
-
-            />
-          </div>
-        </div>
-        {/* Aquí usaré un link por mientras, hasta que haga el state y pueda usar navigate*/}
-        <Link to='/novedades' >
-          <Button type="submit" className='m-4'>Iniciar Sesión</Button>
-        </Link>
-
-      </form>
+        <Button className='m-4'
+          onClick={() => navigate(`/novedades`)}
+        >Crear Cuenta</Button>
+      </Form>
 
       <p>¿Aún no tienes tu cuenta?</p>
 
       <Button type="btn" className='m-4'
-      onClick={() => navigate(`/registrarse`)}
-       >Crear Cuenta</Button>
+        onClick={() => navigate(`/registrarse`)}
+      >Crear Cuenta</Button>
+
 
     </div>
   )

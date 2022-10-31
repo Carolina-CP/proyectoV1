@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/esm/Button';
+import Form from 'react-bootstrap/Form';
 import { useNavigate } from "react-router-dom";
 
 const Registrase = () => {
@@ -7,40 +8,37 @@ const Registrase = () => {
   const navigate = useNavigate();
 
   return (
-    
-    <div className='container text-center ml-5 mt-5 w-25'>
-      <h5>Crea una cuenta y mejora tus opciones laborales</h5>
-      <form className="form-group">
-<div className='text-start'> 
-        <div className=" mt-4">
-          <label className=" mb-2">Nombre</label>
-          <input type="text"
-            className="form-control"/>
-        </div>
+    <div className='container text-center ml-5 mt-5 col-10 col-md-4'>
 
-        <div className=" mt-4">
-          <label className=" mb-2">Apellido</label>
-          <input type="text"
-            className="form-control"/>
-        </div>
+<h5>Crea una cuenta hoy y mejora tus opciones laborales</h5>
 
-        <div className=" mt-4">
-          <label className=" mb-2">Correo Electrónico</label>
-          <input type="mail"
-            className="form-control"
-            placeholder='name@example.com' />
-        </div>
+      <Form>
+        <Form.Group className="mb-3 text-start" >
+          <Form.Label>Nombre</Form.Label>
+          <Form.Control type="text" />
+        </Form.Group>
 
-        <div className=" mt-4">
-          <label className=" mb-2">Contraseña</label>
-          <input type="pasword"
-            className="form-control"/>
-        </div>
-</div>
-        <Button type="submit" className='m-4'
-        onClick={() => navigate(`/ingresar`)}
+        <Form.Group className="mb-3 text-start" >
+          <Form.Label>Apellido</Form.Label>
+          <Form.Control type="text" />
+        </Form.Group>
+
+        <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
+          <Form.Label>Coreo Electrónico</Form.Label>
+          <Form.Control type="email" />
+        </Form.Group>
+
+        <Form.Group className="mb-3 text-start" controlId="formBasicPassword">
+          <Form.Label>Contraseña</Form.Label>
+          <Form.Control type="password" />
+        </Form.Group>
+
+
+        <Button className='m-4'
+          onClick={() => navigate(`/ingresar`)}
         >Crear Cuenta</Button>
-      </form>
+      </Form>
+
     </div>
   )
 }
