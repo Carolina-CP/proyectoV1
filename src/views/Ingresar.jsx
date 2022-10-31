@@ -23,7 +23,7 @@ const Ingresar = () => {
 
         <Button className='m-4'
           onClick={() => navigate(`/novedades`)}
-        >Crear Cuenta</Button>
+        >Ingresar</Button>
       </Form>
 
       <p>¿Aún no tienes tu cuenta?</p>
